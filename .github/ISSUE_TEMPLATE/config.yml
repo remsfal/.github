@@ -1,11 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Discussions
-    url: https://github.com/keycloak/keycloak/discussions
-    about: Propose new ideas, provide feedback, or ask for help here
-  - name: User mailing list
-    url: https://groups.google.com/forum/#!forum/keycloak-user
-    about: Ask and answer questions here 
-  - name: Developer mailing list 
-    url: https://groups.google.com/forum/#!forum/keycloak-dev
-    about: Propose new features and join in design discussions here
+  - name: Backend Discussions
+    url: https://github.com/remsfal/remsfal-backend/discussions
+    about: Propose new ideas for, provide feedback about, or ask for help with the backend here
+  - name: Frontend Discussions
+    url: https://github.com/remsfal/remsfal-frontend/discussions
+    about: Propose new ideas for, provide feedback about, or ask for help with the frontend here
