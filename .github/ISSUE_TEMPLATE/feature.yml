@@ -1,5 +1,5 @@
 name: Feature Request
-description: Request a new feature to be added to Keycloak
+description: Request a new feature to be added to Remsfal
 labels: ["kind/feature", "status/triage"]
 body:
   - type: textarea
@@ -16,7 +16,7 @@ body:
       description: |
         If there has been a discussion around the feature, provide a link to the discussion.
 
-        Please note that all, except small requests, should be discussed through [GitHub Discussion](https://github.com/keycloak/keycloak/discussions/categories/ideas).
+        Please note that all, except small requests, should be discussed through the [frontend-Discussion-Board](https://github.com/remsfal/remsfal-frontend/discussions) or the [backend-Discussion-Board](https://github.com/remsfal/remsfal-backend/discussions).
     validations:
       required: false
   - type: textarea
