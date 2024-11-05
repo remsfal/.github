@@ -16,7 +16,7 @@ body:
       description: |
         If there has been a discussion around the enhancement, provide a link to the discussion.
 
-        Please note that larger enhancements should be discussed through [GitHub Discussion](https://github.com/keycloak/keycloak/discussions/categories/ideas).
+        Please note that larger enhancements should be discussed through the [frontend-Discussion-Board](https://github.com/remsfal/remsfal-frontend/discussions) or the [backend-Discussion-Board]([GitHub frontend-Discussion](https://github.com/remsfal/remsfal-backend/discussions).
     validations:
       required: false
   - type: textarea
@@ -30,6 +30,6 @@ body:
     id: details
     attributes:
       label: Details
-      description: More details? Implementation ideas? Anything that will give us more context about the enhancement you are proposing!
+      description: More details? Implementation ideas? Anything that will give more context about the enhancement you are proposing!
     validations:
       required: false
