@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Backend Discussions
+    url: https://github.com/remsfal/remsfal-backend/discussions
+    about: Propose new ideas for, provide feedback about, or ask for help with the backend here
+  - name: Frontend Discussions
+    url: https://github.com/remsfal/remsfal-frontend/discussions
+    about: Propose new ideas for, provide feedback about, or ask for help with the frontend here
