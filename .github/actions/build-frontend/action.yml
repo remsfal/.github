@@ -1,10 +1,15 @@
 name: Build REMSFAL Frontend
-description: Setting up Node and building REMSFAL Frontend
+description: Setting up Node.js and building REMSFAL Frontend
 
 inputs:
+  node-version:
+    description: 'Node.js release version'
+    required: true
+    default: 'lts/*'
   working-directory:
     description: 'NPM working-directory'
     required: true
+    default: ${{ github.workspace }}
 
 runs:
   using: composite
