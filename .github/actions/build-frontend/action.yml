@@ -35,4 +35,4 @@ runs:
     - name: Build distribution
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-      run: npm build
+      run: npm run build
