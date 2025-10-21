@@ -1,4 +1,6 @@
-# Remsfal Community Health Files
+![REMSFAL](https://remsfal.de/remsfal-logo.svg)
+
+# REMSFAL Community Health Files
 
 This README contains instructions on how to add health files for the Remsfal project.
 
