@@ -1,18 +1,26 @@
-# Remsfal Community
+# Contributing to REMSFAL
 
-Remsfal is an Open Source Facility Management Software and Information System for small property management companies through to housing associations.
+**REMSFAL** is an open source platform for the management of residential and commercial real estate. It connects
+property managers, tenants and contractors in a single system with structured, traceable workflows.
+
+Participation in the REMSFAL project is governed by the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
 ## Building and Working with the Codebase
 
-For instructions on how to build and work with the Remsfal codebase, please refer to the individual readme.
+For instructions on how to build and work with the REMSFAL codebase, please refer to the README of the respective
+repository. The `AGENT.md` of each repository is the single source of truth for the project architecture and coding
+conventions – please read it **before** implementing a change:
 
-## Contributing to Remsfal
+- Frontend: [README.md](https://github.com/remsfal/remsfal-frontend/blob/main/README.md) and [AGENT.md](https://github.com/remsfal/remsfal-frontend/blob/main/AGENT.md)
+- Backend: [README.md](https://github.com/remsfal/remsfal-backend/blob/main/README.md) and [AGENT.md](https://github.com/remsfal/remsfal-backend/blob/main/AGENT.md)
 
-Remsfal is a community-driven project, and we welcome contributions and feedback. To help streamline contributions, please review the following guidelines to ensure a smooth process.
+## Contributing to REMSFAL
 
-If you plan to contribute a larger change, we recommend starting with a discussion. This helps identify if the proposed change aligns with the project’s goals and provides an opportunity for early feedback. For smaller changes, feel free to directly submit a pull request.
+REMSFAL is a community-driven project, and we welcome contributions and feedback. To help streamline contributions, please review the following guidelines to ensure a smooth process.
 
-Here’s a quick checklist for a good PR (details provided below):
+If you plan to contribute a larger change, we recommend starting with a discussion. This helps identify if the proposed change aligns with the project's goals and provides an opportunity for early feedback. For smaller changes, feel free to directly submit a pull request.
+
+Here's a quick checklist for a good PR (details provided below):
 
 1. Start with a discussion for major changes.
 2. Open a GitHub Issue with a detailed description, linked to your PR.
@@ -27,11 +35,11 @@ Once submitted, please monitor your PR for any feedback. Note that we may close 
 
 ### Finding Issues to Work On
 
-If you’d like to contribute but aren’t sure where to start, take a look at [open issues backend](https://github.com/remsfal/remsfal-backend/issues) or [open issues frontend](https://github.com/remsfal/remsfal-frontend/issues). These include various tasks, from simple to complex, that need contributions.
+If you'd like to contribute but aren't sure where to start, take a look at the open [frontend issues](https://github.com/remsfal/remsfal-frontend/issues) and [backend issues](https://github.com/remsfal/remsfal-backend/issues). These include various tasks, from simple to complex, that need contributions.
 
 ### Starting a Discussion for Proposed Changes
 
-For major changes, please open a [GitHub Discussion Frontend](https://github.com/remsfal/remsfal-frontend/discussions) or [GitHub Discussion Backend](https://github.com/remsfal/remsfal-backend/discussions) as well as [open issues frontend](https://github.com/remsfal/remsfal-frontend/issues) and [open issues backend](https://github.com/remsfal/remsfal-backend/issues). This is where we can discuss the proposed idea and gather feedback.
+For major changes, please open a discussion in the [frontend discussions](https://github.com/remsfal/remsfal-frontend/discussions) or [backend discussions](https://github.com/remsfal/remsfal-backend/discussions). This is where we can discuss the proposed idea and gather feedback.
 
 ### Creating an Issue
 
@@ -41,19 +49,21 @@ When opening an issue, please use the provided issue template. This will help re
 
 When working on a new feature or bug fix, create a new branch from the `main` branch. This helps keep your changes isolated and makes it easier to merge them back into the main codebase.
 
-The format for branch names should be `issue-<issue-number>-short-description`. For example, `issue-#1234-fix-typo`.
+The format for branch names should be `issue-<issue-number>-short-description`. For example, `issue-1234-fix-typo`.
 
-Tip: To change the name of a branch you’re currently on, use `git branch -m <new-branch-name>`. If you’re on a different branch, use `git branch -m <old-branch-name> <new-branch-name>`.
+Tip: To change the name of a branch you're currently on, use `git branch -m <new-branch-name>`. If you're on a different branch, use `git branch -m <old-branch-name> <new-branch-name>`.
 
 ### Implementing Changes
 
-Instructions for building the project from source and general guidelines for contributing can be found in the Building Guides
-- [Backend Guide](https://github.com/remsfal/remsfal-backend/blob/main/README.md)
-- [Frontend Guide](https://github.com/remsfal/remsfal-backend/blob/main/README.md)
+Instructions for building the project from source and general guidelines for contributing can be found in the READMEs. The architecture, patterns and coding conventions are described in the `AGENT.md` files:
+
+- Frontend: [README.md](https://github.com/remsfal/remsfal-frontend/blob/main/README.md) and [AGENT.md](https://github.com/remsfal/remsfal-frontend/blob/main/AGENT.md)
+- Backend: [README.md](https://github.com/remsfal/remsfal-backend/blob/main/README.md) and [AGENT.md](https://github.com/remsfal/remsfal-backend/blob/main/AGENT.md)
 
 Please avoid formatting or refactoring code unrelated to your change, as this increases review complexity. If code refactoring is necessary, submit it as a separate PR.
 
 ### Writing Tests
+
 When making code changes, please ensure to include both functional tests and integration tests. This helps validate your changes and prevents potential regressions. For help with writing tests, reach out to our community.
 
 To ensure comprehensive test coverage, consider the following:
@@ -67,7 +77,7 @@ Remember to check your tests locally before opening a PR. This helps keep our CI
 
 ### Documentation
 
-Make sure to include any relevant documentation updates with your code changes. Review this Documentation and other Current Documentation's to ensure consistency.
+Make sure to include any relevant documentation updates with your code changes. Review the existing documentation (READMEs and `AGENT.md`) to ensure consistency.
 
 ### Submitting a Pull Request (PR)
 
@@ -80,9 +90,9 @@ To rebase, use `git rebase` instead of `git pull`. This approach keeps the commi
 
 ### Developer's Certificate of Origin
 
-Please make sure your contributions can legally be included in the Remsfal project, and sign off your commits with `--signoff` or `-s` to indicate your agreement to the [Developer’s Certificate of Origin](https://developercertificate.org/)
+Please make sure your contributions can legally be included in the REMSFAL project, and sign off your commits with `--signoff` or `-s` to indicate your agreement to the [Developer's Certificate of Origin](https://developercertificate.org/).
 
-### Commit messages and issue linking
+### Commit Messages and Issue Linking
 
 The format for a commit message should look like:
 
@@ -92,7 +102,7 @@ A brief descriptive summary
 Optionally, more details around how it was implemented
 
 Closes #1234
-``` 
+```
 
 The very last part of the commit message should be a link to the GitHub issue, when done correctly GitHub will automatically link the issue with the PR. There are 3 alternatives provided by GitHub here:
 
@@ -100,7 +110,7 @@ The very last part of the commit message should be a link to the GitHub issue, w
 * Fixes: Issues in a different repository (this shouldn't be used, as issues should be created in the correct repository instead)
 * Resolves: When multiple issues are resolved (this should be avoided)
 
-Although, GitHub allows alternatives (close, closed, fix, fixed), please only use the above formats.
+Although GitHub allows alternatives (close, closed, fix, fixed), please only use the above formats.
 
 Creating multi line commit messages with `git` can be done with:
 
@@ -118,6 +128,4 @@ $ git commit -s -m "Summary
 > Closes #1234"
 ```
 
-For more information linking PRs to issues refer to the [GitHub Documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
-
-
+For more information on linking PRs to issues, refer to the [GitHub Documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue).
