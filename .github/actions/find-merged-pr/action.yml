@@ -1,13 +1,17 @@
 name: 'Find Merged Pull Request for Commit'
-description: 'Finds the pull request that merged the current commit to the target branch.'
+description: 'Finds the pull request that merged the given commit to the target branch.'
 
 inputs:
   token:
     description: 'GitHub token'
     required: true
+  sha:
+    description: 'Commit to look up (default: github.sha; use github.event.workflow_run.head_sha in workflow_run events)'
+    required: false
+    default: ''
 outputs:
   pr-number:
-    description: 'Number of the found pull request (empty if none found)'
+    description: 'Number of the found pull request (empty if none found, e.g. for commits pushed directly by a release)'
     value: ${{ steps.find-pr.outputs.pr-number }}
   pr-title:
     description: 'Title of the found pull request (empty if none found)'
@@ -21,16 +25,21 @@ runs:
       shell: bash
       env:
         GH_TOKEN: ${{ inputs.token }}
+        SHA: ${{ inputs.sha || github.sha }}
       run: |
-        # Fetch the pull request associated with the current commit
-        PR_INFO=$(gh api \
-          repos/${{ github.repository }}/commits/${{ github.sha }}/pulls \
-          -H "Accept: application/vnd.github.groot-preview+json" \
-          --jq '.[0] | {number, title}')
+        # Fetch the merged pull request associated with the commit (none for directly pushed commits)
+        PR_INFO=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${SHA}/pulls" \
+          --jq '[.[] | select(.merged_at != null)][0] // empty | {number, title}')
+        if [ -z "$PR_INFO" ]; then
+          echo "No merged PR found for commit ${SHA}"
+          echo "pr-number=" >> "$GITHUB_OUTPUT"
+          echo "pr-title=" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
         # Extract number and title
-        PR_NUM=$(jq -r '.number' <<< "$PR_INFO" || echo '')
-        PR_TITLE=$(jq -r '.title' <<< "$PR_INFO" || echo '')
+        PR_NUM=$(jq -r '.number' <<< "$PR_INFO")
+        PR_TITLE=$(jq -r '.title' <<< "$PR_INFO")
         echo "Found merged PR #$PR_NUM: $PR_TITLE"
         # Set outputs
-        echo "pr-number=$PR_NUM" >> $GITHUB_OUTPUT
-        echo "pr-title=$PR_TITLE" >> $GITHUB_OUTPUT
+        echo "pr-number=$PR_NUM" >> "$GITHUB_OUTPUT"
+        echo "pr-title=$PR_TITLE" >> "$GITHUB_OUTPUT"
